@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nehal Atiq | Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="7dd8c2e9-b08b-4908-9ef6-142669610d7a.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Three.js for AI Robot Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-text">NEHAL ATIQ</div>
+        <div class="loader-bar-container">
+            <div class="loader-progress" id="progress-bar"></div>
+        </div>
+        <div class="mt-2 text-xs text-gray-500 font-mono">LOADING PORTFOLIO...</div>
+    </div>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/923113844483" target="_blank" class="whatsapp-float group">
+        <i class="fab fa-whatsapp"></i>
+        <span class="absolute right-20 bg-white text-black px-4 py-2 rounded-xl text-sm font-bold opacity-0 group-hover:opacity-100 transition-all whitespace-nowrap pointer-events-none shadow-lg transform translate-x-4 group-hover:translate-x-0">
+            Chat on WhatsApp
+        </span>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 left-0 bg-black/80 backdrop-blur-xl border-b border-white/5 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl md:text-2xl font-bold tracking-tighter flex items-center gap-2">
+                <!-- FIXED LOGO: Text based professional logo -->
+                <span class="text-white">NEHAL<span class="text-gray-400">ATIQ</span></span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <a href="#contact" class="btn-primary hidden md:block text-sm py-2 px-6 animate-pulse">Hire Me</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 border-t border-white/10 p-6 absolute w-full backdrop-blur-xl">
+            <div class="flex flex-col space-y-6 text-center">
+                <a href="#home" class="text-gray-300 hover:text-white text-lg">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-white text-lg">About</a>
+                <a href="#services" class="text-gray-300 hover:text-white text-lg">Services</a>
+                <a href="#projects" class="text-gray-300 hover:text-white text-lg">Projects</a>
+                <a href="#contact" class="text-gray-300 hover:text-white text-lg">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div id="robot-container"></div>
+        
+        <div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+            <!-- Left Side - Text Content -->
+            <div data-aos="fade-right" data-aos-duration="1200">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-sm">
+                    <span class="status-dot"></span>
+                    <span class="text-gray-300 font-medium text-xs uppercase tracking-widest">Available for Freelance</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+                    Hi, I'm <br>
+                    <span class="gradient-text">Nehal Atiq</span>
+                </h1>
+                <p class="text-gray-400 text-lg mb-10 max-w-lg leading-relaxed border-l-2 border-indigo-500 pl-6">
+                    A motivated <strong class="text-white">Web & Frontend Developer</strong> & <strong class="text-white">Shopify Expert & Website Designer</strong> based in Karachi. I build responsive, modern, and user-focused websites that drive business growth.
+                </p>
+                <div class="flex flex-wrap gap-5">
+                    <a href="#projects" class="btn-primary">View Projects <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="px-8 py-3.5 rounded-full border border-white/20 hover:bg-white/10 hover:border-white/40 transition-all text-white font-semibold backdrop-blur-sm">Contact Me</a>
+                </div>
+                
+                <div class="mt-16 flex gap-8 border-t border-white/10 pt-8">
+                    <a href="https://github.com/NehalAtiq-dev" class="text-2xl text-gray-500 hover:text-white hover:scale-125 transition-all duration-300"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/nehal-a-8b3aa0383/" class="text-2xl text-gray-500 hover:text-blue-500 hover:scale-125 transition-all duration-300"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-2xl text-gray-500 hover:text-pink-500 hover:scale-125 transition-all duration-300"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <!-- Right Side - Professional Image -->
+            <div class="hidden md:flex justify-center items-center relative" data-aos="fade-left" data-aos-duration="1200">
+                <div class="pro-image-wrapper" id="heroImageWrapper">
+                    <div class="pro-image-frame" id="heroImageFrame">
+                    
+                        <img src="4.png" alt="Nehal Atiq - Frontend Developer" 
+                             onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800';">
+                        <div class="pro-image-overlay"></div>
+                        
+                        <!-- Bottom Info Strip -->
+                        <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-white font-bold text-xl">Nehal Atiq</h3>
+                                    <p class="text-gray-300 text-sm">Frontend Developer</p>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-2xl font-bold gradient-text">2+</div>
+                                    <p class="text-xs text-gray-400">Years Exp</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Badges -->
+                    <div class="pro-badge badge-1">
+                        <div class="w-10 h-10 rounded-xl bg-green-500/20 flex items-center justify-center text-green-400">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div>
+                            <div class="text-white font-bold text-sm">10+ Projects</div>
+                            <div class="text-xs text-gray-400">Completed</div>
+                        </div>
+                    </div>
+
+                    <div class="pro-badge badge-2">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-500/20 flex items-center justify-center text-indigo-400">
+                            <i class="fab fa-shopify"></i>
+                        </div>
+                        <div>
+                            <div class="text-white font-bold text-sm">Shopify Expert</div>
+                            <div class="text-xs text-gray-400">Certified</div>
+                        </div>
+                    </div>
+
+                    <div class="pro-badge badge-3">
+                        <div class="w-10 h-10 rounded-xl bg-pink-500/20 flex items-center justify-center text-pink-400">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div>
+                            <div class="text-white font-bold text-sm">React & JS</div>
+                            <div class="text-xs text-gray-400">Specialist</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-black/50 relative">
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent"></div>
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">About <span class="gradient-text">Me</span></h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-pink-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative group" data-aos="fade-right">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-[40px] blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                    <!-- Same Professional Image Shape Here -->
+                    <div class="pro-image-frame !aspect-[3/4] !max-w-[400px]">
+                        <img src="4.png" alt="Nehal Atiq" 
+                             onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800';">
+                    </div>
+                    
+                    <div class="absolute -bottom-6 -right-22 bg-black border border-white/10 p-6 rounded-2xl shadow-xl z-10">
+                        <div class="text-4xl font-bold gradient-text">2+</div>
+                        <div class="text-sm text-gray-400 uppercase tracking-wider">Years Exp.</div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h3 class="text-3xl font-bold mb-6 text-white">Professional Frontend Developer</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed text-lg">
+                        Motivated Frontend Developer and Shopify Store Designer with hands-on experience in building responsive, modern, and user-focused websites. Skilled in HTML, CSS, JavaScript, React, and Shopify customization with a strong focus on performance, clean UI, and mobile-first design.
+                    </p>
+                    <p class="text-gray-400 mb-10 leading-relaxed text-lg">
+                        Currently pursuing Intermediate (Pre-Engineering) at Bahria College, Karachi. Passionate about creating high-quality digital experiences that improve usability and drive business growth. Actively seeking opportunities to contribute to professional projects.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-8 mb-10">
+                        <div class="border-l-2 border-indigo-500 pl-4">
+                            <h4 class="text-3xl font-bold text-white">10+</h4>
+                            <p class="text-sm text-gray-400">Projects Completed</p>
+                        </div>
+                        <div class="border-l-2 border-pink-500 pl-4">
+                            <h4 class="text-3xl font-bold text-white">100%</h4>
+                            <p class="text-sm text-gray-400">Client Satisfaction</p>
+                        </div>
+                        <div class="border-l-2 border-purple-500 pl-4">
+                            <h4 class="text-3xl font-bold text-white">3+</h4>
+                            <p class="text-sm text-gray-400">Certifications</p>
+                        </div>
+                        <div class="border-l-2 border-blue-500 pl-4">
+                            <h4 class="text-3xl font-bold text-white">24/7</h4>
+                            <p class="text-sm text-gray-400">Support</p>
+                        </div>
+                    </div>
+
+                    <a href="Nehal Atiq CV.pdf" download class="btn-primary inline-flex items-center gap-2">
+                        Download CV <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">My <span class="gradient-text">Services</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">Click on any service to see detailed information about what I offer.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card p-10 group cursor-pointer" onclick="openServiceModal('webdev')" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 text-3xl mb-8 group-hover:bg-indigo-500 group-hover:text-white transition-all duration-300">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Web Development</h3>
+                    <p class="text-gray-400 leading-relaxed">Custom websites built with modern technologies like React, HTML, CSS, and JS.</p>
+                    <div class="mt-4 text-indigo-400 text-sm font-semibold flex items-center gap-2">Read More <i class="fas fa-arrow-right"></i></div>
+                </div>
+
+                <div class="glass-card p-10 group cursor-pointer" onclick="openServiceModal('shopify')" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 rounded-2xl bg-green-500/10 flex items-center justify-center text-green-400 text-3xl mb-8 group-hover:bg-green-500 group-hover:text-white transition-all duration-300">
+                        <i class="fab fa-shopify"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Shopify Design</h3>
+                    <p class="text-gray-400 leading-relaxed">Complete Shopify store setup, theme customization, and app integration.</p>
+                    <div class="mt-4 text-green-400 text-sm font-semibold flex items-center gap-2">Read More <i class="fas fa-arrow-right"></i></div>
+                </div>
+
+                <div class="glass-card p-10 group cursor-pointer" onclick="openServiceModal('frontend')" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-400 text-3xl mb-8 group-hover:bg-blue-500 group-hover:text-white transition-all duration-300">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Frontend Dev</h3>
+                    <p class="text-gray-400 leading-relaxed">Responsive and interactive frontend development using HTML5, CSS3, and React.</p>
+                    <div class="mt-4 text-blue-400 text-sm font-semibold flex items-center gap-2">Read More <i class="fas fa-arrow-right"></i></div>
+                </div>
+
+                <div class="glass-card p-10 group cursor-pointer" onclick="openServiceModal('ecommerce-design')" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 rounded-2xl bg-pink-500/10 flex items-center justify-center text-pink-400 text-3xl mb-8 group-hover:bg-pink-500 group-hover:text-white transition-all duration-300">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">E-commerce Website Design</h3>
+                    <p class="text-gray-400 leading-relaxed">I develop comprehensive, secure, and user-friendly online stores to help you sell products seamlessly.</p>
+                    <div class="mt-4 text-pink-400 text-sm font-semibold flex items-center gap-2">Read More <i class="fas fa-arrow-right"></i></div>
+                </div>
+
+                <div class="glass-card p-10 group cursor-pointer" onclick="openServiceModal('responsive-web-design')" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 rounded-2xl bg-pink-500/10 flex items-center justify-center text-pink-400 text-3xl mb-8 group-hover:bg-pink-500 group-hover:text-white transition-all duration-300">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Responsive Website Design</h3>
+                    <p class="text-gray-400 leading-relaxed">I ensure your website looks stunning and functions flawlessly on desktops, tablets, and smartphones.</p>
+                    <div class="mt-4 text-pink-400 text-sm font-semibold flex items-center gap-2">Read More <i class="fas fa-arrow-right"></i></div>
+                </div>
+
+                <div class="glass-card p-10 group cursor-pointer" onclick="openServiceModal('uiux')" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 rounded-2xl bg-pink-500/10 flex items-center justify-center text-pink-400 text-3xl mb-8 group-hover:bg-pink-500 group-hover:text-white transition-all duration-300">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">UI/UX Design</h3>
+                    <p class="text-gray-400 leading-relaxed">Creating intuitive and visually appealing user interfaces and prototypes.</p>
+                    <div class="mt-4 text-pink-400 text-sm font-semibold flex items-center gap-2">Read More <i class="fas fa-arrow-right"></i></div>
+                </div>
+
+                <div class="glass-card p-10 group cursor-pointer" onclick="openServiceModal('shopify-seo')" data-aos="fade-up" data-aos-delay="500">
+    <div class="w-16 h-16 rounded-2xl bg-pink-500/10 flex items-center justify-center text-pink-400 text-3xl mb-8 group-hover:bg-pink-500 group-hover:text-white transition-all duration-300">
+        <i class="fas fa-search-dollar"></i>
+    </div>
+    <h3 class="text-2xl font-bold mb-4 text-white">Shopify SEO & Marketing</h3>
+    <p class="text-gray-400 leading-relaxed">Optimize your Shopify store to rank higher on Google and drive organic traffic and sales.</p>
+    <div class="mt-4 text-pink-400 text-sm font-semibold flex items-center gap-2">Read More <i class="fas fa-arrow-right"></i></div>
+</div>
+
+                <div class="glass-card p-10 group cursor-pointer" onclick="openServiceModal('landing')" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-16 h-16 rounded-2xl bg-purple-500/10 flex items-center justify-center text-purple-400 text-3xl mb-8 group-hover:bg-purple-500 group-hover:text-white transition-all duration-300">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Landing Pages</h3>
+                    <p class="text-gray-400 leading-relaxed">High-converting landing pages designed to capture leads and drive sales.</p>
+                    <div class="mt-4 text-purple-400 text-sm font-semibold flex items-center gap-2">Read More <i class="fas fa-arrow-right"></i></div>
+                </div>
+
+                <div class="glass-card p-10 group cursor-pointer" onclick="openServiceModal('business')" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-16 h-16 rounded-2xl bg-red-500/10 flex items-center justify-center text-red-400 text-3xl mb-8 group-hover:bg-red-500 group-hover:text-white transition-all duration-300">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Business Websites</h3>
+                    <p class="text-gray-400 leading-relaxed">Professional corporate websites that establish trust and authority.</p>
+                    <div class="mt-4 text-red-400 text-sm font-semibold flex items-center gap-2">Read More <i class="fas fa-arrow-right"></i></div>
+                </div>
+
+                <div class="glass-card p-10 group cursor-pointer" onclick="openServiceModal('seo')" data-aos="fade-up" data-aos-delay="700">
+                    <div class="w-16 h-16 rounded-2xl bg-yellow-500/10 flex items-center justify-center text-yellow-400 text-3xl mb-8 group-hover:bg-yellow-500 group-hover:text-white transition-all duration-300">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">SEO Optimization</h3>
+                    <p class="text-gray-400 leading-relaxed">Technical and on-page SEO to rank your website higher on Google search results.</p>
+                    <div class="mt-4 text-yellow-400 text-sm font-semibold flex items-center gap-2">Read More <i class="fas fa-arrow-right"></i></div>
+                </div>
+
+                <div class="glass-card p-10 group cursor-pointer" onclick="openServiceModal('shopify-migration')" data-aos="fade-up" data-aos-delay="600">
+    <div class="w-16 h-16 rounded-2xl bg-pink-500/10 flex items-center justify-center text-pink-400 text-3xl mb-8 group-hover:bg-pink-500 group-hover:text-white transition-all duration-300">
+        <i class="fas fa-exchange-alt"></i>
+    </div>
+    <h3 class="text-2xl font-bold mb-4 text-white">Shopify Store Migration</h3>
+    <p class="text-gray-400 leading-relaxed">Seamlessly migrate your existing online store from WordPress, WooCommerce, or Wix to Shopify.</p>
+    <div class="mt-4 text-pink-400 text-sm font-semibold flex items-center gap-2">Read More <i class="fas fa-arrow-right"></i></div>
+</div>
+
+                <div class="glass-card p-10 group cursor-pointer" onclick="openServiceModal('maintenance')" data-aos="fade-up" data-aos-delay="800">
+                    <div class="w-16 h-16 rounded-2xl bg-orange-500/10 flex items-center justify-center text-orange-400 text-3xl mb-8 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Website Maintenance</h3>
+                    <p class="text-gray-400 leading-relaxed">Regular updates, security checks, and bug fixes to keep your site running smoothly.</p>
+                    <div class="mt-4 text-orange-400 text-sm font-semibold flex items-center gap-2">Read More <i class="fas fa-arrow-right"></i></div>
+                </div>
+
+                <div class="glass-card p-10 group cursor-pointer" onclick="openServiceModal('portfolio')" data-aos="fade-up" data-aos-delay="900">
+                    <div class="w-16 h-16 rounded-2xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-3xl mb-8 group-hover:bg-cyan-500 group-hover:text-white transition-all duration-300">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Portfolio Design</h3>
+                    <p class="text-gray-400 leading-relaxed">Stunning personal portfolio websites for professionals and students.</p>
+                    <div class="mt-4 text-cyan-400 text-sm font-semibold flex items-center gap-2">Read More <i class="fas fa-arrow-right"></i></div>
+                </div>
+<div class="glass-card p-10 group cursor-pointer" onclick="openServiceModal('shopify-maintenance')" data-aos="fade-up" data-aos-delay="700">
+    <div class="w-16 h-16 rounded-2xl bg-pink-500/10 flex items-center justify-center text-pink-400 text-3xl mb-8 group-hover:bg-pink-500 group-hover:text-white transition-all duration-300">
+        <i class="fas fa-tools"></i>
+    </div>
+    <h3 class="text-2xl font-bold mb-4 text-white">Shopify Maintenance</h3>
+    <p class="text-gray-400 leading-relaxed">Keep your Shopify store secure, updated, and running without any technical glitches.</p>
+    <div class="mt-4 text-pink-400 text-sm font-semibold flex items-center gap-2">Read More <i class="fas fa-arrow-right"></i></div>
+</div>
+                <div class="glass-card p-10 group cursor-pointer" onclick="openServiceModal('ecommerce')" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="w-16 h-16 rounded-2xl bg-teal-500/10 flex items-center justify-center text-teal-400 text-3xl mb-8 group-hover:bg-teal-500 group-hover:text-white transition-all duration-300">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">E-commerce UI</h3>
+                    <p class="text-gray-400 leading-relaxed">User-friendly interfaces for online stores to maximize conversions.</p>
+                    <div class="mt-4 text-teal-400 text-sm font-semibold flex items-center gap-2">Read More <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 bg-black/50 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent"></div>
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-20" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Technical <span class="gradient-text">Skills</span></h2>
+            <p class="text-gray-400">My proficiency in various technologies and tools.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-16">
+            <div data-aos="fade-right">
+                <h3 class="text-2xl font-bold mb-10 text-white flex items-center gap-3">
+                    <i class="fas fa-code text-indigo-500"></i> Development
+                </h3>
+                
+                <div class="space-y-8">
+                    <div>
+                        <div class="flex justify-between mb-3">
+                            <span class="text-white font-medium">HTML5 / CSS3</span>
+                            <span class="text-indigo-400">95%</span>
+                        </div>
+                        <div class="w-full bg-slate-800 rounded-full h-2">
+                            <div class="skill-bar-fill bg-gradient-to-r from-indigo-500 to-pink-500 h-2 rounded-full shadow-[0_0_10px_rgba(99,102,241,0.5)]" data-width="95%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-3">
+                            <span class="text-white font-medium">JavaScript (ES6+)</span>
+                            <span class="text-indigo-400">85%</span>
+                        </div>
+                        <div class="w-full bg-slate-800 rounded-full h-2">
+                            <div class="skill-bar-fill bg-gradient-to-r from-indigo-500 to-pink-500 h-2 rounded-full shadow-[0_0_10px_rgba(99,102,241,0.5)]" data-width="85%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-3">
+                            <span class="text-white font-medium">React.js / Next.js</span>
+                            <span class="text-indigo-400">80%</span>
+                        </div>
+                        <div class="w-full bg-slate-800 rounded-full h-2">
+                            <div class="skill-bar-fill bg-gradient-to-r from-indigo-500 to-pink-500 h-2 rounded-full shadow-[0_0_10px_rgba(99,102,241,0.5)]" data-width="80%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-3">
+                            <span class="text-white font-medium">Shopify (Liquid)</span>
+                            <span class="text-indigo-400">90%</span>
+                        </div>
+                        <div class="w-full bg-slate-800 rounded-full h-2">
+                            <div class="skill-bar-fill bg-gradient-to-r from-indigo-500 to-pink-500 h-2 rounded-full shadow-[0_0_10px_rgba(99,102,241,0.5)]" data-width="90%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-3">
+                            <span class="text-white font-medium">Node.js / REST APIs</span>
+                            <span class="text-indigo-400">75%</span>
+                        </div>
+                        <div class="w-full bg-slate-800 rounded-full h-2">
+                            <div class="skill-bar-fill bg-gradient-to-r from-indigo-500 to-pink-500 h-2 rounded-full shadow-[0_0_10px_rgba(99,102,241,0.5)]" data-width="75%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-3">
+                            <span class="text-white font-medium">TypeScript</span>
+                            <span class="text-indigo-400">70%</span>
+                        </div>
+                        <div class="w-full bg-slate-800 rounded-full h-2">
+                            <div class="skill-bar-fill bg-gradient-to-r from-indigo-500 to-pink-500 h-2 rounded-full shadow-[0_0_10px_rgba(99,102,241,0.5)]" data-width="70%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-3">
+                            <span class="text-white font-medium">WordPress & PHP</span>
+                            <span class="text-indigo-400">85%</span>
+                        </div>
+                        <div class="w-full bg-slate-800 rounded-full h-2">
+                            <div class="skill-bar-fill bg-gradient-to-r from-indigo-500 to-pink-500 h-2 rounded-full shadow-[0_0_10px_rgba(99,102,241,0.5)]" data-width="85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-aos="fade-left">
+                <h3 class="text-2xl font-bold mb-10 text-white flex items-center gap-3">
+                    <i class="fas fa-layer-group text-pink-500"></i> Design & Tools
+                </h3>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="skill-tag flex items-center gap-3">
+                        <i class="fab fa-figma text-2xl text-purple-400"></i>
+                        <span class="text-white font-medium">Figma (UI/UX)</span>
+                    </div>
+                    <div class="skill-tag flex items-center gap-3">
+                        <i class="fab fa-git-alt text-2xl text-orange-400"></i>
+                        <span class="text-white font-medium">Git / GitHub</span>
+                    </div>
+                    <div class="skill-tag flex items-center gap-3">
+                        <i class="fas fa-wind text-2xl text-cyan-400"></i>
+                        <span class="text-white font-medium">Tailwind CSS</span>
+                    </div>
+                    <div class="skill-tag flex items-center gap-3">
+                        <i class="fas fa-shopping-bag text-2xl text-green-500"></i>
+                        <span class="text-white font-medium">Shopify Admin</span>
+                    </div>
+                    <div class="skill-tag flex items-center gap-3">
+                        <i class="fas fa-search text-2xl text-yellow-400"></i>
+                        <span class="text-white font-medium">Technical SEO</span>
+                    </div>
+                    <div class="skill-tag flex items-center gap-3">
+                        <i class="fas fa-palette text-2xl text-pink-400"></i>
+                        <span class="text-white font-medium">Adobe XD</span>
+                    </div>
+                    <div class="skill-tag flex items-center gap-3">
+                        <i class="fas fa-bolt text-2xl text-amber-400"></i>
+                        <span class="text-white font-medium">Web Speed Opt.</span>
+                    </div>
+                    <div class="skill-tag flex items-center gap-3">
+                        <i class="fas fa-vial text-2xl text-emerald-400"></i>
+                        <span class="text-white font-medium">Cross-Browser Test</span>
+                    </div>
+                    <div class="skill-tag flex items-center gap-3">
+                        <i class="fas fa-chart-line text-2xl text-blue-400"></i>
+                        <span class="text-white font-medium">Google Analytics</span>
+                    </div>
+                    <div class="skill-tag flex items-center gap-3">
+                        <i class="fab fa-bootstrap text-2xl text-violet-500"></i>
+                        <span class="text-white font-medium">Bootstrap</span>
+                    </div>
+                    <div class="skill-tag flex items-center gap-3">
+                        <i class="fas fa-mobile-alt text-2xl text-red-400"></i>
+                        <span class="text-white font-medium">Responsive Design</span>
+                    </div>
+                    <div class="skill-tag flex items-center gap-3">
+                        <i class="fas fa-images text-2xl text-teal-400"></i>
+                        <span class="text-white font-medium">Adobe Photoshop</span>
+                    </div>
+                    <div class="skill-tag flex items-center gap-3">
+                        <i class="fas fa-terminal text-2xl text-gray-400"></i>
+                        <span class="text-white font-medium">Command Line</span>
+                    </div>
+                    <div class="skill-tag flex items-center gap-3">
+                        <i class="fas fa-shield-alt text-2xl text-orange-500"></i>
+                        <span class="text-white font-medium">Web Security</span>
+                    </div>
+                    <div class="skill-tag flex items-center gap-3">
+                        <i class="fas fa-server text-2xl text-indigo-400"></i>
+                        <span class="text-white font-medium">Vercel / Netlify</span>
+                    </div>
+                    <div class="skill-tag flex items-center gap-3">
+                        <i class="fas fa-sync text-2xl text-lime-400"></i>
+                        <span class="text-white font-medium">Postman (APIs)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  
+    <!-- Projects Section -->
+    <section id="projects" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Featured <span class="gradient-text">Projects</span></h2>
+                <p class="text-gray-400">Some of my best work delivered to clients.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
+                <button onclick="filterProjects('all')" class="filter-btn active px-6 py-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 hover:bg-indigo-500 hover:text-white transition-all">All Projects</button>
+                <button onclick="filterProjects('store')" class="filter-btn px-6 py-2 rounded-full border border-white/10 hover:border-indigo-500/50 hover:bg-indigo-500/10 hover:text-indigo-300 transition-all">Stores</button>
+                <button onclick="filterProjects('website')" class="filter-btn px-6 py-2 rounded-full border border-white/10 hover:border-indigo-500/50 hover:bg-indigo-500/10 hover:text-indigo-300 transition-all">Websites</button>
+                <button onclick="filterProjects('landing')" class="filter-btn px-6 py-2 rounded-full border border-white/10 hover:border-indigo-500/50 hover:bg-indigo-500/10 hover:text-indigo-300 transition-all">Landing Pages</button>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="project-grid">
+                <!-- Project 1: Store -->
+                <div class="glass-card overflow-hidden group project-item" data-category="store" data-aos="fade-up">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="landing/img/3ce93390-6ea3-4290-911f-0f774e73f4b9.jpg" alt="The Nexaura" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
+                            <button onclick="openModal('proj1')" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-eye"></i></button>
+                            <a href="https://thenexaura.store/" target="_blank" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">The Nexaura</h3>
+                            <span class="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded border border-green-500/30">Store</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">Premium e-commerce store with advanced product filtering and seamless checkout experience.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">Shopify</span>
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">Liquid</span>
+                        </div>
+                        <button onclick="openModal('proj1')" class="text-indigo-400 text-sm font-semibold hover:text-indigo-300 flex items-center gap-2 group/btn">View Details <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i></button>
+                    </div>
+                </div>
+
+                <!-- Project 2: Store -->
+                <div class="glass-card overflow-hidden group project-item" data-category="store" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="landing/img/Bagx.jpg" alt="Bagx.pk" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
+                            <button onclick="openModal('proj2')" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-eye"></i></button>
+                            <a href="https://www.bagx.pk/" target="_blank" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Bagx.pk</h3>
+                            <span class="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded border border-green-500/30">Store</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">Fashionable bag store with elegant UI design and mobile-responsive layout.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">Shopify</span>
+                        </div>
+                        <button onclick="openModal('proj2')" class="text-indigo-400 text-sm font-semibold hover:text-indigo-300 flex items-center gap-2 group/btn">View Details <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i></button>
+                    </div>
+                </div>
+
+                <!-- Project 3: Store -->
+                <div class="glass-card overflow-hidden group project-item" data-category="store" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="landing/img/ne.jpg" alt="Shop Manto" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
+                            <button onclick="openModal('proj3')" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-eye"></i></button>
+                            <a href="https://www.shopmanto.com/" target="_blank" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Shop Manto</h3>
+                            <span class="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded border border-green-500/30">Store</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">Modern clothing brand store with dynamic collections and fast loading speed.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">Shopify</span>
+                        </div>
+                        <button onclick="openModal('proj3')" class="text-indigo-400 text-sm font-semibold hover:text-indigo-300 flex items-center gap-2 group/btn">View Details <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i></button>
+                    </div>
+                </div>
+
+                <!-- Project 4: Store -->
+                <div class="glass-card overflow-hidden group project-item" data-category="store" data-aos="fade-up">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="landing/img/sport.png" alt="Sports Plus" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
+                            <button onclick="openModal('proj4')" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-eye"></i></button>
+                            <a href="https://www.sportsplus.pk/" target="_blank" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Sports Plus</h3>
+                            <span class="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded border border-green-500/30">Store</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">Sports equipment e-commerce platform with categorized listings and secure payments.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">Shopify</span>
+                        </div>
+                        <button onclick="openModal('proj4')" class="text-indigo-400 text-sm font-semibold hover:text-indigo-300 flex items-center gap-2 group/btn">View Details <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i></button>
+                    </div>
+                </div>
+
+                <!-- Project 5: Store -->
+                <div class="glass-card overflow-hidden group project-item" data-category="store" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="landing/img/ox.jpg" alt="Oxford" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
+                            <button onclick="openModal('proj5')" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-eye"></i></button>
+                            <a href="https://www.oxford.com.pk/" target="_blank" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Oxford</h3>
+                            <span class="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded border border-green-500/30">Store</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">Educational and lifestyle store with clean navigation and professional branding.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">Shopify</span>
+                        </div>
+                        <button onclick="openModal('proj5')" class="text-indigo-400 text-sm font-semibold hover:text-indigo-300 flex items-center gap-2 group/btn">View Details <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i></button>
+                    </div>
+                </div>
+
+                <!-- Project 6: Landing Page -->
+                <div class="glass-card overflow-hidden group project-item" data-category="landing" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="landing/img/land.png" alt="Synthetix Nexus" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
+                            <button onclick="openModal('proj6')" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-eye"></i></button>
+                            <a href="https://synthetix-nexus-landing-page.netlify.app/" target="_blank" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Synthetix Nexus</h3>
+                            <span class="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded border border-purple-500/30">Landing</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">High-tech landing page with futuristic design elements and smooth animations.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">React</span>
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">Tailwind</span>
+                        </div>
+                        <button onclick="openModal('proj6')" class="text-indigo-400 text-sm font-semibold hover:text-indigo-300 flex items-center gap-2 group/btn">View Details <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i></button>
+                    </div>
+                </div>
+
+                <!-- Hidden Projects (Will show on Load More) -->
+                <div class="glass-card overflow-hidden group project-item hidden-project" data-category="website" style="display: none;">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="landing/img/cof.jpg" alt="Coffee Business" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
+                            <button onclick="openModal('proj7')" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-eye"></i></button>
+                            <a href="https://cofee-busniess-website.netlify.app/" target="_blank" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Coffee Business</h3>
+                            <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30">Website</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">A warm and inviting website for a coffee shop business featuring menu and location details.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">HTML</span>
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">CSS</span>
+                        </div>
+                        <button onclick="openModal('proj7')" class="text-indigo-400 text-sm font-semibold hover:text-indigo-300 flex items-center gap-2 group/btn">View Details <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i></button>
+                    </div>
+                </div>
+
+                <div class="glass-card overflow-hidden group project-item hidden-project" data-category="website" style="display: none;">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="landing/img/la.png" alt="Vertex Business" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
+                            <button onclick="openModal('proj8')" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-eye"></i></button>
+                            <a href="https://vertex-busniess-websites.netlify.app/" target="_blank" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Vertex Business</h3>
+                            <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30">Website</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">Corporate business website layout with professional services showcase.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">HTML</span>
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">JS</span>
+                        </div>
+                        <button onclick="openModal('proj8')" class="text-indigo-400 text-sm font-semibold hover:text-indigo-300 flex items-center gap-2 group/btn">View Details <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i></button>
+                    </div>
+                </div>
+
+                 <div class="glass-card overflow-hidden group project-item hidden-project" data-category="landing" style="display: none;">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="landing/img/l.png" alt="Vortex Nexus" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
+                            <button onclick="openModal('proj9')" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-eye"></i></button>
+                            <a href="https://vortex-nexus-landing-page.netlify.app/" target="_blank" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Vortex Nexus</h3>
+                            <span class="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded border border-purple-500/30">Landing</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">Dynamic landing page with vortex-themed visuals and call-to-action sections.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">HTML</span>
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">CSS</span>
+                        </div>
+                        <button onclick="openModal('proj9')" class="text-indigo-400 text-sm font-semibold hover:text-indigo-300 flex items-center gap-2 group/btn">View Details <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i></button>
+                    </div>
+                </div>
+
+                <div class="glass-card overflow-hidden group project-item hidden-project" data-category="landing" style="display: none;">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="landing/img/p.png" alt="Nexus Landing PG" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
+                            <button onclick="openModal('proj10')" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-eye"></i></button>
+                            <a href="https://nexus-landing-pg.netlify.app/" target="_blank" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Nexus Landing PG</h3>
+                            <span class="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded border border-purple-500/30">Landing</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">Minimalist landing page focused on conversion and clean typography.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">HTML</span>
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">JS</span>
+                        </div>
+                        <button onclick="openModal('proj10')" class="text-indigo-400 text-sm font-semibold hover:text-indigo-300 flex items-center gap-2 group/btn">View Details <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i></button>
+                    </div>
+                </div>
+
+                <div class="glass-card overflow-hidden group project-item hidden-project" data-category="landing" style="display: none;">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="landing/img/lum.jpg" alt="Lumina" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
+                            <button onclick="openModal('proj11')" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-eye"></i></button>
+                            <a href="https://stellular-tapioca-a3c4e5.netlify.app/" target="_blank" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Lumina</h3>
+                            <span class="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded border border-purple-500/30">responsive-web-design</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">Unique branding project with stellar design aesthetics and playful colors.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">React</span>
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">CSS</span>
+                        </div>
+                        <button onclick="openModal('proj11')" class="text-indigo-400 text-sm font-semibold hover:text-indigo-300 flex items-center gap-2 group/btn">View Details <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i></button>
+                    </div>
+                </div>
+
+                <div class="glass-card overflow-hidden group project-item hidden-project" data-category="landing" style="display: none;">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="landing/img/tur.jpg" alt="Turbo Motors" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
+                            <button onclick="openModal('proj12')" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-eye"></i></button>
+                            <a href="https://loquacious-yeot-891ba3.netlify.app/" target="_blank" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Turbo Motors</h3>
+                            <span class="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded border border-purple-500/30">Websites</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">Creative portfolio layout with expressive typography and grid layouts.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">HTML</span>
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">CSS</span>
+                        </div>
+                        <button onclick="openModal('proj12')" class="text-indigo-400 text-sm font-semibold hover:text-indigo-300 flex items-center gap-2 group/btn">View Details <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i></button>
+                    </div>
+                </div>
+
+                <div class="glass-card overflow-hidden group project-item hidden-project" data-category="website" style="display: none;">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="landing/img/burg.jpg" alt="Burger & Bite" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
+                            <button onclick="openModal('proj13')" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-eye"></i></button>
+                            <a href="https://reliable-begonia-dcd41e.netlify.app/" target="_blank" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Burger & Bite</h3>
+                            <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30">Website</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">Elegant floral-themed website with soft colors and smooth transitions.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">HTML</span>
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">JS</span>
+                        </div>
+                        <button onclick="openModal('proj13')" class="text-indigo-400 text-sm font-semibold hover:text-indigo-300 flex items-center gap-2 group/btn">View Details <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i></button>
+                    </div>
+                </div>
+
+                <div class="glass-card overflow-hidden group project-item hidden-project" data-category="website" style="display: none;">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="landing/img/gen.png" alt="Result Generator" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
+                            <button onclick="openModal('proj14')" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-eye"></i></button>
+                            <a href="https://student-result-generator.netlify.app/" target="_blank" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Result Generator</h3>
+                            <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30">Generator</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">Functional web app to generate and format student results dynamically.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">JavaScript</span>
+                        </div>
+                        <button onclick="openModal('proj14')" class="text-indigo-400 text-sm font-semibold hover:text-indigo-300 flex items-center gap-2 group/btn">View Details <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i></button>
+                    </div>
+                </div>
+
+                <div class="glass-card overflow-hidden group project-item hidden-project" data-category="website" style="display: none;">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="landing/img/shah.jpg" alt="Shah Securities" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
+                            <button onclick="openModal('proj16')" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-eye"></i></button>
+                            <a href="https://shah-securities-websites.netlify.app/" target="_blank" class="bg-white text-black w-12 h-12 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-110"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Shah Securities</h3>
+                            <span class="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded border border-blue-500/30">Website</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-6 line-clamp-2">Financial services website with stock market updates and professional layout.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">HTML</span>
+                            <span class="text-xs bg-indigo-500/10 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/20">CSS</span>
+                        </div>
+                        <button onclick="openModal('proj16')" class="text-indigo-400 text-sm font-semibold hover:text-indigo-300 flex items-center gap-2 group/btn">View Details <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-16" data-aos="zoom-in">
+                <button onclick="loadMoreProjects()" id="exploreBtn" class="btn-primary text-lg px-10 py-4">
+                    View All Projects <i class="fas fa-th-large ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-black/50 relative">
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent"></div>
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Client <span class="gradient-text">Reviews</span></h2>
+                <p class="text-gray-400">Trusted by businesses across Pakistan.</p>
+            </div>
+
+            <div class="testimonial-slider" data-aos="fade-left">
+                <div class="testimonial-card glass-card p-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-14 h-14 rounded-full border-2 border-indigo-500">
+                        <div>
+                            <h4 class="text-white font-bold">Ahmed Khan</h4>
+                            <p class="text-xs text-gray-400">CEO, TechStart Lahore</p>
+                        </div>
+                        <div class="ml-auto text-yellow-400 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"Nehal ne hamari Shopify store ko bilkul professional look diya. Sales mein 30% izafa hua hai. Highly recommended!"</p>
+                </div>
+
+                <div class="testimonial-card glass-card p-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="w-14 h-14 rounded-full border-2 border-pink-500">
+                        <div>
+                            <h4 class="text-white font-bold">Fatima Noor</h4>
+                            <p class="text-xs text-gray-400">Owner, Boutique Karachi</p>
+                        </div>
+                        <div class="ml-auto text-yellow-400 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"Bohat hi acha kaam kiya hai. Website fast hai aur mobile pe perfect chalti hai. Thank you Boost And Grow Digital!"</p>
+                </div>
+
+                <div class="testimonial-card glass-card p-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Client" class="w-14 h-14 rounded-full border-2 border-blue-500">
+                        <div>
+                            <h4 class="text-white font-bold">Usman Ali</h4>
+                            <p class="text-xs text-gray-400">Director, Real Estate Islamabad</p>
+                        </div>
+                        <div class="ml-auto text-yellow-400 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"Professional behavior aur timely delivery. Hamari property listing website ab bohat modern lagti hai."</p>
+                </div>
+
+                <div class="testimonial-card glass-card p-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client" class="w-14 h-14 rounded-full border-2 border-purple-500">
+                        <div>
+                            <h4 class="text-white font-bold">Ayesha Siddiqui</h4>
+                            <p class="text-xs text-gray-400">Founder, Beauty Hub</p>
+                        </div>
+                        <div class="ml-auto text-yellow-400 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"Best frontend developer! The design is exactly what I wanted. Very cooperative and skilled."</p>
+                </div>
+
+                <div class="testimonial-card glass-card p-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Client" class="w-14 h-14 rounded-full border-2 border-green-500">
+                        <div>
+                            <h4 class="text-white font-bold">Bilal Ahmed</h4>
+                            <p class="text-xs text-gray-400">Manager, Auto Parts Rawalpindi</p>
+                        </div>
+                        <div class="ml-auto text-yellow-400 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"Excellent service. My e-commerce store is running smoothly now. Great job Nehal!"</p>
+                </div>
+
+                <div class="testimonial-card glass-card p-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Client" class="w-14 h-14 rounded-full border-2 border-red-500">
+                        <div>
+                            <h4 class="text-white font-bold">Zainab Malik</h4>
+                            <p class="text-xs text-gray-400">Blogger, Lahore</p>
+                        </div>
+                        <div class="ml-auto text-yellow-400 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"Mera blog ab bohat fast load hota hai. SEO friendly design ki wajah se traffic bhi badha hai."</p>
+                </div>
+
+                <div class="testimonial-card glass-card p-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Client" class="w-14 h-14 rounded-full border-2 border-yellow-500">
+                        <div>
+                            <h4 class="text-white font-bold">Tariq Mahmood</h4>
+                            <p class="text-xs text-gray-400">Restaurant Owner, Karachi</p>
+                        </div>
+                        <div class="ml-auto text-yellow-400 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"Food ordering website ke liye best choice. Customers ko use karna bohat easy hai."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Frequently Asked <span class="gradient-text">Questions</span></h2>
+            </div>
+
+            <div class="space-y-4" data-aos="fade-up">
+                <div class="glass-card p-6 cursor-pointer group" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">How long does it take to build a Shopify store?</h3>
+                        <i class="fas fa-plus text-indigo-400 transition-transform duration-300"></i>
+                    </div>
+                    <div class="hidden mt-4 text-gray-400 leading-relaxed border-t border-white/10 pt-4">
+                        Typically, a standard Shopify store takes 7-10 days, while a fully customized store with advanced features may take 2-3 weeks.
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 cursor-pointer group" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">Do you provide after-sales support?</h3>
+                        <i class="fas fa-plus text-indigo-400 transition-transform duration-300"></i>
+                    </div>
+                    <div class="hidden mt-4 text-gray-400 leading-relaxed border-t border-white/10 pt-4">
+                        Yes! I offer 1 month of free support after project completion to fix any bugs or minor adjustments.
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 cursor-pointer group" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">Can you redesign my existing website?</h3>
+                        <i class="fas fa-plus text-indigo-400 transition-transform duration-300"></i>
+                    </div>
+                    <div class="hidden mt-4 text-gray-400 leading-relaxed border-t border-white/10 pt-4">
+                        Absolutely. I can give your existing website a fresh, modern look that converts better and improves user experience.
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 cursor-pointer group" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">Are your websites mobile-friendly?</h3>
+                        <i class="fas fa-plus text-indigo-400 transition-transform duration-300"></i>
+                    </div>
+                    <div class="hidden mt-4 text-gray-400 leading-relaxed border-t border-white/10 pt-4">
+                        Yes, all my websites are fully responsive and optimized for mobile, tablet, and desktop devices.
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 cursor-pointer group" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">Do you help with SEO?</h3>
+                        <i class="fas fa-plus text-indigo-400 transition-transform duration-300"></i>
+                    </div>
+                    <div class="hidden mt-4 text-gray-400 leading-relaxed border-t border-white/10 pt-4">
+                        Yes, I implement basic on-page SEO practices to help your website rank better on search engines.
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 cursor-pointer group" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">What technologies do you use?</h3>
+                        <i class="fas fa-plus text-indigo-400 transition-transform duration-300"></i>
+                    </div>
+                    <div class="hidden mt-4 text-gray-400 leading-relaxed border-t border-white/10 pt-4">
+                        I primarily use HTML, CSS, JavaScript, React, and Shopify Liquid, depending on the project requirements.
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 cursor-pointer group" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-white">How do we start a project?</h3>
+                        <i class="fas fa-plus text-indigo-400 transition-transform duration-300"></i>
+                    </div>
+                    <div class="hidden mt-4 text-gray-400 leading-relaxed border-t border-white/10 pt-4">
+                        Simply contact me via WhatsApp or Email, discuss your requirements, and we will get started!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-black/50 relative">
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent"></div>
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="text-gray-400">Have a project in mind? Let's discuss.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <div class="glass-card p-10 mb-8">
+                        <h3 class="text-2xl font-bold mb-8 text-white">Contact Information</h3>
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-6 group">
+                                <div class="w-14 h-14 rounded-full bg-indigo-500/10 flex items-center justify-center text-indigo-400 shrink-0 group-hover:bg-indigo-500 group-hover:text-white transition-all duration-300">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-semibold text-lg">Email</h4>
+                                    <p class="text-gray-400">nehalatiq890@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-6 group">
+                                <div class="w-14 h-14 rounded-full bg-indigo-500/10 flex items-center justify-center text-indigo-400 shrink-0 group-hover:bg-indigo-500 group-hover:text-white transition-all duration-300">
+                                    <i class="fas fa-phone text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-semibold text-lg">Phone & Watsappp</h4>
+                                    <p class="text-gray-400">+92 311 3844483</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-6 group">
+                                <div class="w-14 h-14 rounded-full bg-indigo-500/10 flex items-center justify-center text-indigo-400 shrink-0 group-hover:bg-indigo-500 group-hover:text-white transition-all duration-300">
+                                    <i class="fas fa-phone text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-semibold text-lg">Alternate Phone</h4>
+                                    <p class="text-gray-400">+92 324 8316260</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-6 group">
+                                <div class="w-14 h-14 rounded-full bg-indigo-500/10 flex items-center justify-center text-indigo-400 shrink-0 group-hover:bg-indigo-500 group-hover:text-white transition-all duration-300">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-semibold text-lg">Location</h4>
+                                    <p class="text-gray-400">Nazimabad, Karachi, Pakistan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card p-10">
+                        <h3 class="text-xl font-bold mb-6 text-white">Follow Me</h3>
+                        <div class="flex gap-4">
+                            <a href="https://www.facebook.com/profile.php?id=61584850318287" class="w-12 h-12 rounded-full bg-white/5  flex items-center justify-center text-white hover:bg-[#1877F2] transition-all duration-300 hover:scale-110"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/NehalAtiqStudio" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-black transition-all duration-300 hover:scale-110"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/nehal-a-8b3aa0383/" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-[#0077b5] transition-all duration-300 hover:scale-110"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-[#E1306C] transition-all duration-300 hover:scale-110"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-10" data-aos="fade-left">
+                    <form id="contactForm" onsubmit="sendToWhatsApp(event)">
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-gray-400 mb-2 text-sm font-medium">Your Name</label>
+                                <input type="text" id="name" required class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-gray-400 mb-2 text-sm font-medium">Your Email</label>
+                                <input type="email" id="email" required class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all" placeholder="john@example.com">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-400 mb-2 text-sm font-medium">Subject</label>
+                            <select id="subject" class="w-full bg-black border border-slate-700 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all appearance-none">
+                                <option>Web Development</option>
+                                <option>Shopify Store Design</option>
+                                <option>Website Design</option>
+                                <option>Landing Page Design</option>
+                                <option>Portfolio Design</option>
+                                <option>Responsive Design</option>
+                                <option>Digital Marketing</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-8">
+                            <label class="block text-gray-400 mb-2 text-sm font-medium">Message</label>
+                            <textarea id="message" rows="5" required class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all" placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full justify-center text-lg">Send Message via WhatsApp <i class="fab fa-whatsapp ml-2"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-white/10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold tracking-tighter flex items-center gap-2">
+                        <span class="text-white">NEHAL<span class="text-gray-400">ATIQ</span></span>
+                    </a>
+                </div>
+                <div class="flex gap-8">
+                    <a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                    <a href="#About" class="text-gray-400 hover:text-white transition-colors">About</a>
+                    <a href="#Skill" class="text-gray-400 hover:text-white transition-colors">Skill</a>
+                    <a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a>
+                    <a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projects</a>
+                    <a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-600 text-sm">&copy; 2026 Nehal Atiq. All Rights Reserved. Web & Frontend Developer & Shopify Expert.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-600 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-600 hover:text-white text-sm">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Service Modal -->
+    <div id="serviceModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeServiceModal()">&times;</span>
+            <div id="serviceModalBody"></div>
+        </div>
+    </div>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
